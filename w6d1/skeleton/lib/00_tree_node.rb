@@ -5,6 +5,7 @@ class PolyTreeNode
     @value = v
     @parent = nil
     @children = []
+    @root_node
   end
 
   def parent=(property)

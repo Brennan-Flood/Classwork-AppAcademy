@@ -88,6 +88,7 @@ end
 def films_and_stars_from_sixty_two
   # List the title and leading star of every 1962 film.
   execute(<<-SQL)
+  
   SQL
 end
 
