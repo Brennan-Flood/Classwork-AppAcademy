@@ -1,0 +1,26 @@
+<% @cat %>
+
+<table>
+
+  <caption> Cat Table </caption>
+
+  <tr>
+    <th scope="col">Birth Date</th>
+    <th scope="col">Color</th>
+    <th scope="col">Name</th>
+    <th scope="col">Sex</th>
+    <th scope="col">Description</th>
+  </tr>
+
+  <tr>
+    <th> <%= @cat.birth_date %> </th>
+    <th> <%= @cat.color %> </th>
+    <th> <%= @cat.name %> </th>
+    <th> <%= @cat.sex %> </th>
+    <th> <%= @cat.description %> </th>
+  </tr>
+
+<p>
+<a href="<%= edit_cat_url %>"> Edit a cat!
+</p>
+</table>
