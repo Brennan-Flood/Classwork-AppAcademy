@@ -1,0 +1,22 @@
+/* PHASE 4: Footer */
+footer {
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px; 
+    margin: 10px; 
+    border-bottom: 1px solid lightgray; 
+    text-align: center; 
+}
+
+footer > ul {
+    display: flex; 
+}
+
+footer > ul > li {
+    margin-right: 6px;
+}
+
+footer > ul > li:hover {
+    color: gray;
+}
