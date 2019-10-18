@@ -6,7 +6,7 @@ let Piece = require("./piece");
  */
 function _makeGrid () {
   const grid = [];
-
+  // debugger
   for (i=0; i < 8; i++) {
     let row = new Array(8);
     grid.push(row);

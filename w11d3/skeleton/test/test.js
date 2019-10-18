@@ -51,6 +51,7 @@ describe("Board", function () {
   };
 
   describe("#grid", function () {
+    // debugger
     it("should be 8x8", function () {
       assert.equal(testBoard.grid.length, 8);
       for(let i = 0; i < 8; i ++){

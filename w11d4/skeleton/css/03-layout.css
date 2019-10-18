@@ -1,0 +1,50 @@
+/* PHASE 3: Layout */
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background: #fff;
+  width: 900px;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+.content-sidebar {
+  width: 200px;
+  min-height: 200px;
+  padding: 20px;
+  padding-right: 19px;
+  border-right: 1px solid #ccc;
+}
+
+.content-main {
+  width: 620px;
+  min-height: 200px;
+  padding: 20px;
+}
+
+.content-header {
+  display: flex;
+  height: 150px;
+  background-image: url(../images/cats.jpg);
+  width: 100%;
+  background-size: cover;
+  position: relative;
+} 
+
+.content-header > header {
+  position: absolute;
+  color: white;
+  /* display: flex;  */
+  /* justify-content: center; */
+  top: 110px;
+  right: 400px; 
+}
+
+.content-header > button {
+  position: absolute;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+}
