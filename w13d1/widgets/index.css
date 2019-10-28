@@ -1,0 +1,49 @@
+html {
+  background-color: rgb(116, 116, 116);
+}
+
+.time {
+  display: block;
+  position: absolute;
+  width: 130px;
+  background-color: rgb(85, 85, 255);
+  height: 170px;
+  left: 2px;
+  top: 2px
+}
+
+h1 {
+  font-family: Staatliches;
+  position: absolute;
+  left: 5px;
+}
+
+h5 {
+  font-family: Staatliches;
+  position: absolute;
+  top: 100px;
+  left: 5px;
+}
+
+h4 {
+  font-family: Staatliches;
+  top: 60px;
+  position: absolute;
+  left: 5px;
+}
+
+.tabs {
+  display: block;
+  position: absolute;
+  top: -14px;
+  left: 140px;
+  height: 170px;
+  width: 170px;
+  background-color: green;
+}
+
+.tabs h5 {
+  display: block;
+  position: absolute;
+  top: -10px;
+}
