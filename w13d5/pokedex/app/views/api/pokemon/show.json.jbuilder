@@ -1,4 +1,10 @@
-json.extract! @poke, :id, :name, :attack, :defense, :poke_type, :moves, :image_url
+
+json.pokemon do
+  item_ids = @poke.items.map { |item| item.id }
+  json.extract! @poke, :id, :name, :attack, :defense, :poke_type, :moves, :image_url  
+  json.item_ids item_ids
+end
+
 
 json.items do
   json.array! @poke.items do |item|
@@ -9,6 +15,7 @@ json.items do
     json.image_url item.image_url
   end
 end
+
 # "name", null: false
 #     t.integer "price", null: false
 #     t.integer "happiness", null: false

@@ -99,7 +99,28 @@
  }
 
  h3 {
-   font-size: 24px;
+   font-size: 10px;
    text-align: center;
    color: $black;
+ }
+
+ .pokeImage {
+   width: 20px;
+   height: 20px;
+   vertical-align: middle;
+   padding-top: 5px;
+   padding-left: 10px;
+ }
+
+ .pokemon {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  border-top: solid black 2px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+ .pokemonList {
+  width: 400px;
  }
