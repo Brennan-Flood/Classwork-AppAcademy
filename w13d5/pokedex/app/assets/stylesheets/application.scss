@@ -102,6 +102,13 @@
    font-size: 10px;
    text-align: center;
    color: $black;
+   font-weight: 200;
+   padding-left: 10px;
+   font-size: 11px;
+ }
+
+ .pokedex-container{
+   display: flex;
  }
 
  .pokeImage {
@@ -119,8 +126,46 @@
   border-top: solid black 2px;
   margin-right: 10px;
   vertical-align: middle;
+  padding-left: 10px;
+  cursor: pointer;
 }
 
  .pokemonList {
-  width: 400px;
+  width: 200px;
+  display: block;
+  padding-left: 0px;
+  overflow: scroll;
+  height: 800px;
+ }
+
+ .pokemon span{
+   display: inline-block;
+   position: relative;
+   padding-top: 9px;
+ }
+
+ .pokemon:hover {
+   background-color: darkgray;
+ }
+
+ .pokemonShow {
+   display: block;
+   background: darkgray;
+   height: 600px;
+   width: 60%;
+  //  width: 500px;
+  text-align: center;
+  border: 8px solid black;
+  border-radius: 10%;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: black;
+ }
+
+ .showImage {
+  max-height: 380px;
+  width: 90%;
+  background: yellow;
+  border: 5px solid black;
+  border-radius: 5%;
  }

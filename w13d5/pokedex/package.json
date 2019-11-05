@@ -18,5 +18,16 @@
   "scripts": {
     "postinstall": "webpack",
     "start": "webpack --mode=development --watch"
-  }
+  },
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

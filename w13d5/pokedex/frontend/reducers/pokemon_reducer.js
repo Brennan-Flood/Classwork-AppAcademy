@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_POKEMON } from '../actions/pokemon_actions';
+import { RECEIVE_ALL_POKEMON, RECEIVE_POKE } from '../actions/pokemon_actions';
 
 const pokemonReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -8,6 +8,12 @@ const pokemonReducer = (state = {}, action) => {
     case RECEIVE_ALL_POKEMON:
       Object.assign(nextState, state, action.pokemon);
       return nextState;
+    case RECEIVE_POKE:
+      // debugger
+      let poke = action.payload.pokemon;
+      Object.assign(nextState, state, { [poke.id]: poke });      
+      return nextState;
+      
     default:
       return state;
   }
