@@ -5,11 +5,11 @@ import { selectPokeItems } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const pokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
-  // debugger
+
   return {
     pokemon,
     items: selectPokeItems(state, pokemon)
-  }
+  };
 };
 
 const mapDispatchToProps = dispatch => {

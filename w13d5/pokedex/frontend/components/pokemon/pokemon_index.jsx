@@ -2,6 +2,8 @@ import React from 'react';
 import PokemonIndexItem from './pokemon_index_item';
 import PokemonDetailContainer from './pokemon_detail_container';
 import { HashRouter, Route } from "react-router-dom";
+import PokemonFormContainer from './pokemon_form_container';
+import { Link } from 'react-router-dom';
 
 class PokemonIndex extends React.Component{
   constructor(props){
@@ -13,7 +15,7 @@ class PokemonIndex extends React.Component{
   }
   
   componentDidMount() {
-    this.props.requestAllPokemon();//.then(() => {this.setState(loading: false)});
+    this.props.requestAllPokemon().then(() => {this.setState({loading: false})});
   }
 
   render(){
@@ -21,14 +23,19 @@ class PokemonIndex extends React.Component{
     const pokemonItems = pokemon.map(poke => (
       <PokemonIndexItem key={poke.id} pokemon={poke} />
     ));
-
-    // exit render uness requestAllPokemon has completed
+    // exit render unless requestAllPokemon has completed
     // if(pokemon.length === 0) return null;
-    // if(this.state.loading) return null;
+    if(this.state.loading) return null;
     
     return (
     <section className="pokedex-container">
+
         <ul className="pokemonList">{pokemonItems}</ul>
+        <Link to={"/pokemon"} className="create-pokemon">Create Pokemon</Link>
+        <Route
+          exact path="/pokemon"
+          component={PokemonFormContainer}
+        />
         <Route
           path="/pokemon/:pokemonId"
           component={PokemonDetailContainer}

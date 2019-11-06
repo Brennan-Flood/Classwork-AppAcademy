@@ -1,4 +1,4 @@
-import { fetchAllPokemon, fetchPoke } from '../util/api_util';
+import { fetchAllPokemon, fetchPoke, createPokemon } from '../util/api_util';
 
 export const RECEIVE_ALL_POKEMON = "RECEIVE_ALL_POKEMON";
 export const RECEIVE_POKE = "RECEIVE_POKE";
@@ -27,3 +27,11 @@ export const requestSinglePokemon = (pokeId) => (dispatch) => {
     dispatch(receivePoke(payload))
   })
 };
+
+export const createPoke = (pokemon) => (dispatch) => {
+  return createPokemon(pokemon).then((pokemon) => {
+    dispatch(receivePoke(pokemon));
+    return pokemon;
+  })
+}
+

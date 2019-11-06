@@ -7,19 +7,22 @@ json.pokemon do
 end
 
 
+# json.items do
+#   json.array! @poke.items do |item|
+#     json.set! item.id do
+#       json.id item.id
+#       json.name item.name
+#       json.price item.price
+#       json.happiness item.happiness
+#       json.image_url item.image_url
+#     end
+#   end
+# end
+
 json.items do
-  json.array! @poke.items do |item|
+  @poke.items.each do |item|
     json.set! item.id do
-      json.id item.id
-      json.name item.name
-      json.price item.price
-      json.happiness item.happiness
-      json.image_url item.image_url
+        json.extract! item, :id, :name, :pokemon_id, :price, :happiness, :image_url
     end
   end
 end
-
-# "name", null: false
-#     t.integer "price", null: false
-#     t.integer "happiness", null: false
-#     t.string "image_url", null: false
