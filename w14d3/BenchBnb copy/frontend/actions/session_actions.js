@@ -29,8 +29,7 @@ export const logoutUser = () => dispatch => {
 
 export const signupUser = user => dispatch => {
   return signup(user).then((user) => {
-    debugger;
-    dispatch(receiveCurrentUser(user))
+    return dispatch(receiveCurrentUser(user))
   });
 };
 

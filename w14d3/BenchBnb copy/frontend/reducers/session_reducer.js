@@ -11,7 +11,7 @@ const sessionReducer = (state = nullState, action) => {
         
             user = action.user;
             // debugger
-            return Object.assign({}, state, { id: Object.values(user)[0].id });
+            return Object.assign({}, state, { id: user.id });
         case LOGOUT_CURRENT_USER:
             return Object.assign({}, state, { id: null });
         default:
