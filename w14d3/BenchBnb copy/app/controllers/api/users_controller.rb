@@ -14,4 +14,3 @@ class Api::UsersController < ApplicationController
     params.require(:user).permit(:username, :password)
   end
 end
-

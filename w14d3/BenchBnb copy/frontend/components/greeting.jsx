@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -14,10 +15,10 @@ class Greeting extends React.Component {
     } else {
       return (
         <div>
-        <Link to='/signup'>
+        <Link to='/login'>
         <button>Login</button>
         </Link>
-        <Link to='/login'>
+          <Link to='/signup'>
         <button>Sign Up</button>
         </Link>
         </div>

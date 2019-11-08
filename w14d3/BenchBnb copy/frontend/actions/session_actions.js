@@ -11,10 +11,10 @@ export const loginUser = user => dispatch =>  {
     });
 };
 
-export const receiveCurrentUser = user => ({
-    type: RECEIVE_CURRENT_USER,
-    user
-}); 
+export const receiveCurrentUser = user => {
+  return {type: RECEIVE_CURRENT_USER,
+    user}
+} ;
 
 export const receiveSessionErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
@@ -29,6 +29,7 @@ export const logoutUser = () => dispatch => {
 
 export const signupUser = user => dispatch => {
   return signup(user).then((user) => {
+    debugger;
     dispatch(receiveCurrentUser(user))
   });
 };
