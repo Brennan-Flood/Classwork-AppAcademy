@@ -1,0 +1,16 @@
+docker container run --name nginx -d -p 80:80 nginx
+docker container run --name apache -d -p 81:80 httpd 
+docker container run --name mysql -e MYSQL_ROOT_PASSWORD=hunter2 -d -p 3306:3306 mysql
+docker container run --name characters -d -p 80:80 alpine Brendas-Air:w18d3 Brennan$ docker container run --name characters -d -p 80:80 alpine /bin/sh -c "while :; do wget -qO- https://swapi.co/api/people/?search=r2; printf '\n'; sleep 5s; done"
+docker network create newnetwork
+docker container run -d --name nettest1 --net newnetwork --net-alias party elasticsearch:2
+docker container run -d --name nettest2 --net newnetwork --net-alias party elasticsearch:2
+docker container run --net newnetwork alpine nslookup party 
+docker container run --name centos --net newnetwork centos curl -s party:9200
+/Users/Brennan/Desktop/Aa-classwork/w18d3/rad
+
+docker run -d --name nginx \
+ --mount type=bind,source=/Users/Brennan/Desktop/Aa-classwork/w18d3/rad,target=/rad \
+ nginx
+
+docker container run -d --name postgres -v psql-data:/var/lib/postgresql/data postgres:9.6.1
