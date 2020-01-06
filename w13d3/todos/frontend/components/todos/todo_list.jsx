@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoListItem from './todo_list_item.jsx'
+import TodoForm from './todo_form.jsx'
 
 export default class TodoList extends React.Component {
   // return allTodos.forEach(todo => {
@@ -13,9 +14,13 @@ export default class TodoList extends React.Component {
       return item.render();
     });
     return (
-      <ul>
-        { todoItems }
-      </ul>
+      <div>
+        <ul>
+          { todoItems }
+        </ul>
+        
+        <TodoForm receiveTodo={ this.props.receiveTodo }/>
+      </div>
     )
   }
   

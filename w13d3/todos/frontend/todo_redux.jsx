@@ -8,8 +8,8 @@ import { allTodos } from './reducers/selectors';
 document.addEventListener("DOMContentLoaded", () => {
   const store = configureStore();
   window.store = store;
-  window.receiveTodo = receiveTodo;
-  window.receiveTodos = receiveTodos;
-  window.allTodos = allTodos; 
+  // window.receiveTodo = receiveTodo;
+  // window.receiveTodos = receiveTodos;
+  // window.allTodos = allTodos; 
   ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 }); 
