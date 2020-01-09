@@ -21,28 +21,41 @@
 // stepper([3, 4, 1, 0, 10]);           // => true, because we can step through elements 3 -> 4 -> 10
 // stepper([2, 3, 1, 1, 0, 4, 7, 8])    // => false, there is no way to step to the end
 function stepper(nums) {
-    let table = new Array(1);
-    table[0] = 0;
-    let possibilitiesCount = 0;
-    for (let i = 0; i < nums.length - 1; i++ ) {
-        if ( nums[i] + i >= nums.length - 1) {
-            possibilitiesCount += 1;
+    // let table = new Array(1);
+    // table[0] = 0;
+    // let possibilitiesCount = 0;
+    // for (let i = 0; i < nums.length - 1; i++ ) {
+    //     if ( nums[i] + i >= nums.length - 1) {
+    //         possibilitiesCount += 1;
 
-        }
-    }
-    if (possibilitiesCount === 0) {
-        return false;
-    }
-    for (let i = 0; i < table.length; i ++ ) {
-        if (table[i] === nums.length - 1) {
-            return true;
-        }
+    //     }
+    // }
+    // if (possibilitiesCount === 0) {
+    //     return false;
+    // }
+    // for (let i = 0; i < table.length; i ++ ) {
+    //     if (table[i] === nums.length - 1) {
+    //         return true;
+    //     }
 
-        for (let k = table[i]; k < table[i] + nums[table[i]]; k++) {
-            table.push(k);
+    //     for (let k = table[i]; k < table[i] + nums[table[i]]; k++) {
+    //         table.push(k);
+    //     }
+    // }
+    // return false;
+    let table = new Array(nums.length).fill(false);
+    table[0] = true;
+
+    for (let i = 0; i < table.length; i++) {
+        if (table[i] === true) {
+            let range = nums[i];
+            for (let step = 1; step <= range; step++) {
+                table[i + step] = true;
+            }
         }
     }
-    return false;
+
+    return table[table.length - 1];
 }
 
 
