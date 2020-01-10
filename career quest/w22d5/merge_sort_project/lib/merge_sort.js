@@ -21,15 +21,15 @@ function merge(array1, array2) {
 function mergeSort(array) {
     if (array.length < 2) return array;
 
-    let midIdx = Math.floor(array.length / 2);
-    let leftHalf = array.slice(0, midIdx);
-    let rightHalf = array.slice(midIdx);
+    let pivot = Math.floor(array.length / 2);
+    
+    let left = array.slice(0, midIdx);
+    let right = array.slice(midIdx);
 
-    let sortedLeft = mergeSort(leftHalf);
-    let sortedRight = mergeSort(rightHalf);
+    let sortedLeft = mergeSort(left);
+    let sortedRight = mergeSort(right);
 
     return merge(sortedLeft, sortedRight);
-
 }
 
 module.exports = {
