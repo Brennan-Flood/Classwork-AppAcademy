@@ -9,7 +9,13 @@ function inOrderArray(root) {
 }
 
 function postOrderArray(root) {
+    if (!root) return [];
 
+    return [
+        ...postOrderArray(root.left),
+        ...postOrderArray(root.right),
+        root.val,
+    ];
 }
 
 
