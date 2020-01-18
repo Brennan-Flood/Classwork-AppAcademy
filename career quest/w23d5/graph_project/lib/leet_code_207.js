@@ -2,5 +2,5 @@
 //  https://leetcode.com/problems/course-schedule/
 
 function canFinish(numCourses, prerequisites) {
-
+  
 }
